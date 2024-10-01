@@ -1,0 +1,34 @@
+---
+import type { Social } from "../types";
+import Button from "./ui/Button.astro";
+
+interface Props {
+    title: string;
+    socials: Social[];
+}
+
+const { title, socials }: Props = Astro.props;
+---
+
+<header class="bg-white shadow">
+    <div class="container flex mx-auto py-4 px-6">
+        <h1 class="text-slate-900 text-2xl font-bold flex items-center">
+            {title}
+        </h1>
+        <nav class="flex space-x-4 mt-1 ml-auto hidden md:flex">
+            {
+                socials.map((social) => (
+                    <Button>
+                        <a
+                            href={social.url}
+                            class="text-slate-900 hover:text-slate-800"
+                            target="_blank"
+                        >
+                            {social.name}
+                        </a>
+                    </Button>
+                ))
+            }
+        </nav>
+    </div>
+</header>
