@@ -51,4 +51,8 @@ export const profile: Profile = {
             url: "https://github.com/OrzMiku/Verilog_Learn",
         },
     ],
+    icp: {
+        name: "萌ICP备20233993号",
+        url: "https://icp.gov.moe/",
+    }
 };

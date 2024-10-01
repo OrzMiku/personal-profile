@@ -6,7 +6,12 @@ import { profile } from "../data";
     <div class="container mx-auto px-4">
         <p class="text-center text-slate-700">
             © {new Date().getFullYear()}
-            {profile.name}. All rights reserved.
+            {profile.name}. All rights reserved. <Fragment
+                class="inline"
+                set:html={profile.icp
+                    ? `| <a href=${profile.icp.url} class="hover:text-blue-500" target="_blank" rel="ugc">${profile.icp.name}</a>`
+                    : ""}
+            />
         </p>
     </div>
 </footer>
