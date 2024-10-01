@@ -26,6 +26,11 @@ export const profile: Profile = {
             url: "https://modrinth.com/modpack/lunarfox",
         },
         {
+            name: "个人主页",
+            description: "个人主页，用于展示个人信息、项目等信息。",
+            url: "https://github.com/OrzMiku/personal-profile",
+        },
+        {
             name: "MinecraftShader",
             description: "用于记录MC着色器学习。",
             url: "https://github.com/OrzMiku/MinecraftShader",
