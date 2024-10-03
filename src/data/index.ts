@@ -2,7 +2,7 @@ import type { Profile } from "../types";
 
 export const profile: Profile = {
     name: "OrzMiku",
-    tagline: "一位来自中国的热情的编程初学者。",
+    tagline: "求知若渴，虚心若愚，读万卷书，行万里路。",
     email: "miku@ecy.pink",
     avatar: "https://image.dooo.ng/c/2024/09/18/66eadec443e1e.webp",
     socials: [

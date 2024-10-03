@@ -18,15 +18,7 @@ const { title, socials }: Props = Astro.props;
         <nav class="flex space-x-4 mt-1 ml-auto hidden md:flex">
             {
                 socials.map((social) => (
-                    <Button>
-                        <a
-                            href={social.url}
-                            class="text-slate-900 hover:text-slate-800"
-                            target="_blank"
-                        >
-                            {social.name}
-                        </a>
-                    </Button>
+                    <Button href={social.url}>{social.name}</Button>
                 ))
             }
         </nav>

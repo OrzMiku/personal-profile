@@ -28,15 +28,7 @@ import { profile } from "../data";
             <div class="md:hidden flex space-x-4 mt-1 ml-auto justify-center">
                 {
                     profile.socials.map((social) => (
-                        <Button>
-                            <a
-                                href={social.url}
-                                class="text-slate-900 hover:text-slate-800"
-                                target="_blank"
-                            >
-                                {social.name}
-                            </a>
-                        </Button>
+                        <Button href={social.url}>{social.name}</Button>
                     ))
                 }
             </div>
