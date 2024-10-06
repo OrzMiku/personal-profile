@@ -1,0 +1,20 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<ul class="flex space-x-4 items-center">
+  <li>
+    <a
+      href="/"
+      class={`text-lg hover:text-blue-700 hover:underline ${currentPath === "/" ? "text-blue-500" : "text-slate-500"}`}
+      >首页</a
+    >
+  </li>
+  <li>
+    <a
+      href="/blog"
+      class={`text-lg hover:text-slate-900 hover:underline ${currentPath === "/blog" || currentPath.startsWith("/posts") ? "text-blue-500" : "text-slate-500"}`}
+      >博客</a
+    >
+  </li>
+</ul>

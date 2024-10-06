@@ -1,0 +1,35 @@
+---
+import Card from "./ui/Card.astro";
+import Button from "./ui/Button.astro";
+
+const posts = await Astro.glob("../pages/posts/*.md");
+
+// 按照时间排序，最新的在前
+posts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+);
+---
+
+<section>
+  <h2 class="text-2xl font-bold text-slate-900 mb-4">文章</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {
+      posts.map((post) => (
+        <Card>
+          <div class="flex flex-col justify-between h-full">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">
+                {post.frontmatter.title}
+              </h3>
+            </div>
+            <div class="mt-4">
+              <Button href={post.url}>阅读</Button>
+            </div>
+          </div>
+        </Card>
+      ))
+    }
+  </div>
+</section>

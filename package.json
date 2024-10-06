@@ -18,6 +18,7 @@
     "typescript": "^5.6.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
