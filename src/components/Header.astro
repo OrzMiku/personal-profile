@@ -1,13 +1,9 @@
 ---
-import type { Social } from "../types";
-import Button from "./ui/Button.astro";
-
 interface Props {
   title: string;
-  socials: Social[];
 }
 
-const { title, socials }: Props = Astro.props;
+const { title }: Props = Astro.props;
 ---
 
 <header class="bg-white shadow">
@@ -15,12 +11,5 @@ const { title, socials }: Props = Astro.props;
     <h1 class="text-slate-900 text-2xl font-bold flex items-center">
       {title}
     </h1>
-    <nav class="flex space-x-4 mt-1 ml-auto hidden md:flex">
-      {
-        socials.map((social) => (
-          <Button href={social.url}>{social.name}</Button>
-        ))
-      }
-    </nav>
   </div>
 </header>
