@@ -21,7 +21,11 @@ import { profile } from "../data";
         class="flex justify-center md:justify-start items-center text-gray-600 dark:text-gray-300"
       >
         <EmailIcon />
-        <a href="#" class="hover:text-blue-500 ml-2" rel="ugc">
+        <a
+          href={"mailto:" + profile.email}
+          class="hover:text-blue-500 ml-2"
+          rel="ugc"
+        >
           {profile.email}
         </a>
       </div>
