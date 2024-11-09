@@ -13,7 +13,7 @@ const currentPath = Astro.url.pathname;
   <li>
     <a
       href="/blog"
-      class={`text-lg hover:text-slate-900 hover:underline ${currentPath === "/blog" || currentPath.startsWith("/posts") ? "text-blue-500" : "text-slate-500"}`}
+      class={`text-lg hover:text-slate-900 hover:underline ${currentPath.startsWith("/blog") ? "text-blue-500" : "text-slate-500"}`}
       >博客</a
     >
   </li>

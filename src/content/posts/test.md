@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: 测试文章
 date: 2024-09-10
 ---
@@ -32,7 +31,6 @@ _斜体_
 
 ```js
 // 代码块
-
 console.log("Hello World!");
 ```
 
