@@ -1,30 +1,13 @@
 ---
 const { href, external } = Astro.props;
+
+const target = external ? "_blank" : "_self";
 ---
 
-<button
-  class="rounded-md text-sm font-medium border h-10 px-4 py-2 bg-white text-slate-900 border-slate-200 hover:bg-slate-100 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition"
-  data-href={href}
-  data-external={external}
->
-  <slot />
-</button>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll("button[data-href]");
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const href = button.getAttribute("data-href");
-        const external = button.getAttribute("data-external") === "true";
-        if (href) {
-          if (external) {
-            window.open(href, "_blank");
-          } else {
-            window.location.href = href;
-          }
-        }
-      });
-    });
-  });
-</script>
+<a href={href} target={target}>
+  <button
+    class="rounded-md text-sm font-medium border h-10 px-4 py-2 bg-white text-slate-900 border-slate-200 hover:bg-slate-100 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition"
+  >
+    <slot />
+  </button>
+</a>
