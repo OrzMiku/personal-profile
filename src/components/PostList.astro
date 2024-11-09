@@ -6,10 +6,10 @@ import Button from "./ui/Button.astro";
 const posts = await getCollection("posts");
 
 // 生成文章的 URL
-const postUrl = (slug:string) => `/blog/${slug}`;
+const postUrl = (slug: string) => `/blog/${slug}`;
 
 // 按照时间排序，最新的在前
-posts.sort((a, b) => {
+posts.sort((a: { data: { date: string | number | Date; }; }, b: { data: { date: string | number | Date; }; }) => {
   const dateA = new Date(a.data.date).getTime();
   const dateB = new Date(b.data.date).getTime();
   return dateB - dateA;
@@ -20,7 +20,7 @@ posts.sort((a, b) => {
   <h2 class="text-2xl font-bold text-slate-900 mb-4">文章</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     {
-      posts.map((post) => (
+      posts.map((post: { data: { title: unknown; }; slug: string; }) => (
         <Card>
           <div class="flex flex-col justify-between h-full">
             <div>
