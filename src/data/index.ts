@@ -9,14 +9,16 @@ export const profile: Profile = {
     {
       name: "GitHub",
       url: "https://github.com/OrzMiku",
+      external: true,
     },
     {
       name: "BiliBili",
       url: "https://space.bilibili.com/402606447",
+      external: true,
     },
     {
       name: "Blog",
-      url: "https://miku.show",
+      url: "/blog",
     },
   ],
   projects: [
@@ -25,31 +27,38 @@ export const profile: Profile = {
       description:
         "一个我的世界性能整合包，带有生活质量提升模组和 OptiFine 替代方案。",
       url: "https://modrinth.com/modpack/lunarfox",
+      external: true,
     },
     {
       name: "个人主页",
       description: "个人主页，用于展示个人信息、项目等信息。",
       url: "https://github.com/OrzMiku/personal-profile",
+
+      external: true,
     },
     {
       name: "青丘文档",
       description: "芳草遍青丘，繁花绕碧流。",
       url: "https://qdocs.miku.show",
+      external: true,
     },
     {
       name: "像素皮肤站",
       description: "我的世界皮肤站，不开放注册。",
       url: "https://pixelskin.cn",
+      external: true,
     },
     {
       name: "OpenGL_Learn",
       description: "用于记录OpenGL学习。",
       url: "https://github.com/OrzMiku/OpenGL_Learn",
+      external: true,
     },
     {
       name: "orzmiku/noname",
       description: "无名杀Docker容器",
       url: "https://hub.docker.com/r/orzmiku/noname",
+      external: true,
     },
   ],
   icp: {

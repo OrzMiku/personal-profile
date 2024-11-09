@@ -1,12 +1,14 @@
 export type Social = {
   name: string;
   url: string;
+  external?: boolean;
 };
 
 export type Project = {
   name: string;
   description: string;
   url: string;
+  external?: boolean;
 };
 
 export type Profile = {

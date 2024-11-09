@@ -32,7 +32,9 @@ import { profile } from "../data";
       <div class="flex space-x-4 mt-4 mx-auto justify-center md:justify-start">
         {
           profile.socials.map((social) => (
-            <Button href={social.url}>{social.name}</Button>
+            <Button href={social.url} external={social.external}>
+              {social.name}
+            </Button>
           ))
         }
       </div>
