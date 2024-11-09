@@ -1,15 +1,15 @@
 ---
-import { profile } from "../data";
+import config from "../config.ts";
 ---
 
 <footer class="fixed bottom-0 left-0 right-0 bg-white py-4">
   <div class="container mx-auto px-4">
     <p class="text-center text-slate-700">
       © {new Date().getFullYear()}
-      {profile.name}. All rights reserved. <Fragment
+      {config.name}. All rights reserved. <Fragment
         class="inline"
-        set:html={profile.icp
-          ? `| <a href=${profile.icp.url} class="hover:text-blue-500" target="_blank" rel="ugc">${profile.icp.name}</a>`
+        set:html={config.icp
+          ? `| <a href=${config.icp.url} class="hover:text-blue-500" target="_blank" rel="ugc">${config.icp.name}</a>`
           : ""}
       />
     </p>
