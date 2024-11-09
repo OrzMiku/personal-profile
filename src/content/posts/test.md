@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: 测试文章
 date: 2024-09-10
 ---

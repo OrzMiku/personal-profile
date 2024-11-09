@@ -2,16 +2,15 @@
 import Layout from "./Layout.astro";
 import Card from "../components/ui/Card.astro";
 
-const { frontmatter } = Astro.props;
-const date = new Date(frontmatter.date);
+const { title, date } = Astro.props;
 const year = date.getFullYear();
 const month = date.getMonth() + 1;
 const day = date.getDate();
 const formattedDate = `${year}年${month}月${day}日`;
 ---
 
-<Layout title={frontmatter.title}>
-  <div class="post-title text-4xl mb-4 pl-2">{frontmatter.title}</div>
+<Layout title={title}>
+  <div class="post-title text-4xl mb-4 pl-2">{title}</div>
   <div class="post-date text-gray-500 mb-4 pl-2">发布于 {formattedDate}</div>
   <Card>
     <div class="post-card px-4">
