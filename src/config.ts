@@ -1,6 +1,6 @@
-import type { Profile } from "../types";
+import type { SiteConfig } from "./types";
 
-export const profile: Profile = {
+export const siteConfig: SiteConfig = {
   name: "OrzMiku",
   tagline: "求知若渴，虚心若愚，读万卷书，行万里路。",
   email: "miku@ecy.pink",
@@ -10,3 +10,5 @@ export const profile: Profile = {
     url: "https://icp.gov.moe/",
   },
 };
+
+export default siteConfig;

@@ -11,7 +11,7 @@ export type Project = {
   external?: boolean;
 };
 
-export type Profile = {
+export type SiteConfig = {
   name: string;
   tagline: string;
   avatar: string;
