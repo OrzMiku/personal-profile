@@ -1,8 +1,12 @@
 ---
+import { getEntry } from "astro:content";
+import { type Social } from "../types";
+import { profile } from "../data";
 import Card from "./ui/Card.astro";
 import Button from "./ui/Button.astro";
 import EmailIcon from "./icon/EmailIcon.astro";
-import { profile } from "../data";
+
+const socials = await getEntry("data", "socials");
 ---
 
 <Card>
@@ -31,7 +35,7 @@ import { profile } from "../data";
       </div>
       <div class="flex space-x-4 mt-4 mx-auto justify-center md:justify-start">
         {
-          profile.socials.map((social) => (
+          socials.data.map((social: Social) => (
             <Button href={social.url} external={social.external}>
               {social.name}
             </Button>

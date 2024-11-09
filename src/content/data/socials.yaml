@@ -1,0 +1,10 @@
+- name: "GitHub"
+  url: "https://github.com/OrzMiku"
+  external: true
+
+- name: "BiliBili"
+  url: "https://space.bilibili.com/402606447"
+  external: true
+
+- name: "Blog"
+  url: "/blog"

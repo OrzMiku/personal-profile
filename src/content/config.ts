@@ -8,6 +8,11 @@ const blogCollection = defineCollection({
     })
 });
 
+const dataCollection = defineCollection({
+    type: "data"
+});
+
 export const collections = {
-    posts: blogCollection
+    posts: blogCollection,
+    data: dataCollection,
 }

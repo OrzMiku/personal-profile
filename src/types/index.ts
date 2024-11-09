@@ -16,8 +16,6 @@ export type Profile = {
   tagline: string;
   avatar: string;
   email: string;
-  socials: Social[];
-  projects: Project[];
   icp?: {
     name: string;
     url: string;
