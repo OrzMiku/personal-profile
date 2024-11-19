@@ -8,14 +8,14 @@
   url: "https://github.com/OrzMiku/personal-profile"
   external: true
 
+- name: "文件仓库"
+  description: "存有一些公开分享的文件"
+  url: "https://pan.miku.show"
+  external: true
+
 - name: "青丘文档"
   description: "芳草遍青丘，繁花绕碧流。"
   url: "https://qdocs.miku.show"
-  external: true
-
-- name: "像素皮肤站"
-  description: "我的世界皮肤站，不开放注册。"
-  url: "https://pixelskin.cn"
   external: true
 
 - name: "OpenGL_Learn"
