@@ -23,6 +23,11 @@
   url: "https://github.com/OrzMiku/OpenGL_Learn"
   external: true
 
+- name: "JiuXiao"
+  description: "我的世界JE光影，基于俺寻思之力的练习产物。"
+  url: "https://github.com/OrzMiku/JiuXiao"
+  external: true
+
 - name: "orzmiku/noname"
   description: "无名杀Docker容器"
   url: "https://hub.docker.com/r/orzmiku/noname"
