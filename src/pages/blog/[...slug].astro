@@ -14,11 +14,18 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 const post = await getEntry("posts", slug);
-const { Content } = await post.render();
+let data = {};
+let Content = null;
+
+if(post != null) {
+  const rendered = await post.render();
+  Content = rendered.Content;
+  data = post.data;
+} 
 ---
 
-<PostLayout {...post.data}>
+<PostLayout {...data}>
   <Prose>
-    <Content />
+    {Content && <Content />}
   </Prose>
 </PostLayout>
