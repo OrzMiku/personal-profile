@@ -34,7 +34,7 @@ const socials = await getEntry("data", "socials");
         </a>
       </div>
       <div class="flex space-x-4 mt-4 mx-auto justify-center md:justify-start">
-        {
+        {socials && socials.data && 
           socials.data.map((social: Social) => (
             <Button href={social.url} external={social.external}>
               {social.name}

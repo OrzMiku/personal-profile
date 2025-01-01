@@ -9,7 +9,7 @@ const projects = await getEntry("data", "projects");
 <section class="mt-8">
   <h2 class="text-2xl font-bold text-slate-900 mb-4">项目</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-    {
+    {projects && projects.data && 
       projects.data.map((project: Project) => (
         <Card>
           <div class="flex flex-col justify-between h-full">
